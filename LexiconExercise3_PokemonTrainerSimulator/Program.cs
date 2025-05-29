@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var flamethrower = new Attack("Flamethrower", Type.Fire, 12);
+            var ember = new Attack("Ember", Type.Fire, 6);
+
+			Console.WriteLine(flamethrower.Use(10));
+            Console.WriteLine(ember.Use(5));
         }
     }
 }

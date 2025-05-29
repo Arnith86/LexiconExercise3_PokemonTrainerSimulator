@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace LexiconExercise3_PokemonTrainerSimulator
 {
-	/// <summary>
-	/// An enumeration representing different types. 
-	/// Can be used for both Pokémon and Attacks.
-	/// </summary>
-	internal enum Type
+	internal class Pokemon
 	{
-		Fire,
-		Water,
-		Electric
 	}
 }

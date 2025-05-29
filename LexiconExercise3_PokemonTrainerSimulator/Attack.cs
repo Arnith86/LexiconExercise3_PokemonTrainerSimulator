@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LexiconExercise3_PokemonTrainerSimulator;
 /// <summary>
-/// Represents an attack that a Pokémon can perform.
+/// Represents an attack that can be assigned to a Pokémon.
 /// </summary>
 internal class Attack
 {
