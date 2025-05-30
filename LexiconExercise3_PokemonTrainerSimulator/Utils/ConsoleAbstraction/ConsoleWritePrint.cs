@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 namespace LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
 
 /// <summary>
-/// A class that abstracts console input and output operations.
+/// A static class that abstracts console input and output operations.
 /// </summary>
-public class ConsoleWritePrint : IConsoleWritePrint
+public static class ConsoleWritePrint //: IConsoleWritePrint
 {
 	/// <summary>
 	/// Writes a message to the console with a new line at the end.
 	/// </summary>
 	/// <param name="message">The message to write to the console.</param>
-	public void WriteLine(string message) =>
+	public static void WriteLine(string message) =>
 		Console.WriteLine(message);
 
 	/// <summary>
 	/// Writes a message to the console without a new line at the end.
 	/// </summary>
 	/// <param name="message">The message to write to the console.</param>
-	public void Write(string message) =>
+	public static void Write(string message) =>
 		Console.Write(message);
 
 
@@ -30,8 +30,6 @@ public class ConsoleWritePrint : IConsoleWritePrint
 	/// Reads a line of input from the console. If the input is null, returns an empty string.
 	/// </summary>
 	/// <returns>Registered string, or empty string if null was registered.</returns>
-	public string ReadLine()
-	{
-		return Console.ReadLine() ?? string.Empty;
-	}
+	public static string ReadLine() =>
+		Console.ReadLine() ?? string.Empty;
 }

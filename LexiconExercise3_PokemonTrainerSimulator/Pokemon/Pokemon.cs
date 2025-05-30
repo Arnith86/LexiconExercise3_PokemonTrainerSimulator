@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
-using LexiconExercise3_PokemonTrainerSimulator.Utils.NameValidator;
+﻿using LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
+using LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation;
 
 
 namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon;
@@ -14,7 +9,8 @@ namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon;
 /// </summary>
 internal abstract class Pokemon
 {
-	protected static readonly IConsoleWritePrint? _s_consoleWritePrint;
+	protected readonly IConsoleWritePrint _consoleWritePrint;
+	protected readonly IAttackMenuInputValidation _attackMenuInputValidation;
 	private string _name;
 	private int _level;
 	private readonly Type _type;
@@ -23,8 +19,8 @@ internal abstract class Pokemon
 	/// <summary>
 	/// The name of the Pokémon. This property must be set to a non-empty string between 2 and 15 characters long.
 	/// </summary>
-	public string Name 
-	{ 
+	public string Name
+	{
 		get => _name;
 		set
 		{
@@ -33,9 +29,9 @@ internal abstract class Pokemon
 				throw new ArgumentException("Name cannot be null or whitespace.");
 			else if ((value.Length < 2) || (value.Length > 15))
 				throw new ArgumentOutOfRangeException("Name must be between 2 and 15 characters long.");
-			else 
+			else
 				_name = value;
-		} 
+		}
 	}
 
 	/// <summary>
@@ -60,15 +56,12 @@ internal abstract class Pokemon
 
 
 	/// <summary>
-	/// A list of attacks that the Pokémon knows and can performe. The property is set during construction and can be modified later.
+	/// A list of attacks that the Pokémon knows and can performed. The property is set during construction and can be modified later.
 	/// </summary>
 	public List<Attack> Attacks
 	{
 		get => _attacks;
-		protected set
-		{
-			_attacks = value;
-		}
+		protected set => _attacks = value;
 	}
 
 	/// <summary>
@@ -78,10 +71,13 @@ internal abstract class Pokemon
 	/// <param name="level">The level of the Pokémon.</param>
 	/// <param name="type">The <see cref="Type"/> of the Pokémon.</param>
 	/// <param name="attacks">A list of <see cref="Attack"/> that the Pokémon knows. </param>
-	/// <param name="consoleWritePrint">Console abstraction.</param>
-	/// <exception cref="ArgumentNullException">"Attacks cannot be null."</exception>
-	public Pokemon( 
-		string name, 
+	/// <param name="consoleWritePrint">Abstraction for console input and output.</param>
+	/// <param name="attackMenuInputValidation">Service for validating attack menu inputs.</param>
+	/// <exception cref="ArgumentNullException">
+	/// Thrown if <paramref name="attacks"/>, <paramref name="consoleWritePrint"/> or <paramref name="attackMenuInputValidation"/> is <c>null</c>.
+	/// </exception>
+	public Pokemon(
+		string name,
 		int level,
 		Type type,
 		List<Attack> attacks)
@@ -105,6 +101,6 @@ internal abstract class Pokemon
 	public void RaiseLevel()
 	{
 		Level++;
-		_s_consoleWritePrint.WriteLine($"{Name} leveled up to {Level}!");
+		_consoleWritePrint.WriteLine($"{Name} leveled up to {Level}!");
 	}
 }

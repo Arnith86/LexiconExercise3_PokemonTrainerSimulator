@@ -1,5 +1,6 @@
 ﻿namespace LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation
-{
+{//TODO: remove this interface if not used.
+
 	/// <summary>
 	/// This interface defines a contract for validating user input in the attack menu of a Pokémon trainer simulator.
 	/// </summary>
