@@ -1,4 +1,5 @@
 ﻿using LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
+using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation;
 
 
@@ -89,10 +90,38 @@ internal abstract class Pokemon
 	}
 
 	/// <summary>
-	/// Abstract method that must be implemented by derived classes to perform an attack.
+	/// Initiates an attack by displaying the attack menu and allowing the user to choose an attack.
+	/// The attack is displayed in the console.
 	/// </summary>
-	/// <returns>Pokémon performs an attack.</returns>
-	public abstract string Attack();
+	public void Attack()
+	{
+		DisplayAttackMenu.DisplayAttacks(Attacks);
+		Attack attack = ChoseAttack();
+
+		ConsoleWritePrint.WriteLine( attack.Use(Level) );
+	}
+
+	private Attack ChoseAttack()
+	{
+		int menuOption = int.Parse(
+			AttackMenuInputValidation.AttackMenuInputRequest(1, Attacks.Count)
+		);
+		return Attacks[menuOption];
+	}
+
+	/// <summary>
+	/// Randomly selects an attack from the Pokémon list of attacks and invokes it.
+	/// The attack is displayed in the console.
+	/// </summary>
+	public void RandomAttack()
+	{
+		// Picks a random attack from the list of attacks and invokes its .Use-method.
+		int randomIndex = new Random().Next(0, Attacks.Count);
+
+		ConsoleWritePrint.WriteLine(
+			Attacks[randomIndex].Use(Level)
+		);
+	};
 
 
 	/// <summary>
