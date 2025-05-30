@@ -1,9 +1,12 @@
-﻿namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.NamedTypePokemon;
+﻿using LexiconExercise3_PokemonTrainerSimulator.Pokemon.EvolvingPokemon;
+using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
+
+namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.NamedTypePokemon;
 
 /// <summary>
 /// Represents a Pikachu <see cref="Pokemon"/> which is a type of <see cref="ElectricPokemon"/>.
 /// </summary>
-internal class Pikachu : ElectricPokemon
+internal class Pikachu : ElectricPokemon, IEvolvable
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Pikachu"/> class with the specified name, level and attacks.
@@ -14,5 +17,21 @@ internal class Pikachu : ElectricPokemon
 	public Pikachu(string name, int level, List<Attack> attacks)
 			: base(name, level, attacks)
 	{
+	}
+
+	/// <summary>
+	/// Evolves the Pikachu into a Raichu, increasing its level by 10 and changing its name.
+	/// </summary>
+	public void Evolve()
+	{
+		string newName = "Raichu";
+		int newLevel = Level + 10;
+
+		DisplayEvolutionMessage.PrintEvolutionMessage(
+			Name, newName, newLevel
+		);
+
+		Name = newName;
+		Level = newLevel;
 	}
 }
