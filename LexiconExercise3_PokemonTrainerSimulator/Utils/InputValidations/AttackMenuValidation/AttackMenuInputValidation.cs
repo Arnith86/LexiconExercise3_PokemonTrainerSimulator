@@ -1,10 +1,5 @@
 ﻿using LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation;
 
@@ -29,8 +24,8 @@ internal static class AttackMenuInputValidation // : IAttackMenuInputValidation
 			ConsoleWritePrint.Write("Please select an attack by entering the corresponding number: ");
 
 			if (IsAttackMenuInputValid(
-					input = ConsoleWritePrint.ReadLine(), 
-					minOption, 
+					input = ConsoleWritePrint.ReadLine(),
+					minOption,
 					maxOption)
 			)
 				isValidInput = true;
