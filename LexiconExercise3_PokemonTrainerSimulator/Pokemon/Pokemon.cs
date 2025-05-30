@@ -14,7 +14,7 @@ namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon;
 /// </summary>
 internal abstract class Pokemon
 {
-	private readonly ConsoleWritePrint _consoleWritePrint;
+	protected static readonly IConsoleWritePrint? _s_consoleWritePrint;
 	private string _name;
 	private int _level;
 	private readonly Type _type;
@@ -84,14 +84,12 @@ internal abstract class Pokemon
 		string name, 
 		int level,
 		Type type,
-		List<Attack> attacks, 
-		ConsoleWritePrint consoleWritePrint)
+		List<Attack> attacks)
 	{
 		Name = name; // Validated by the Property setter.
 		Level = level; // Validated by the Property setter.
 		_type = type;
 		Attacks = attacks ?? throw new ArgumentNullException("Attacks cannot be null.");
-		_consoleWritePrint = consoleWritePrint;
 	}
 
 	/// <summary>
@@ -107,6 +105,6 @@ internal abstract class Pokemon
 	public void RaiseLevel()
 	{
 		Level++;
-		_consoleWritePrint.WriteLine($"{Name} leveled up to {Level}!");
+		_s_consoleWritePrint.WriteLine($"{Name} leveled up to {Level}!");
 	}
 }
