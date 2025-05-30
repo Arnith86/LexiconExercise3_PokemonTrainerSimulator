@@ -7,11 +7,6 @@ namespace LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages
 	/// </summary>
 	internal static class DisplayErrorMessages
 	{
-		private static IConsoleWritePrint? _consoleWritePrint;
-
-		//public static DisplayErrorMessages(IConsoleWritePrint consoleWritePrint) =>
-		//	_consoleWritePrint = consoleWritePrint;
-
 		/// <summary>
 		/// Used to inform that input supplied was either not a number or outside the expected range.
 		/// </summary>

@@ -10,8 +10,6 @@ namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon;
 /// </summary>
 internal abstract class Pokemon
 {
-	protected readonly IConsoleWritePrint _consoleWritePrint;
-	protected readonly IAttackMenuInputValidation _attackMenuInputValidation;
 	private string _name;
 	private int _level;
 	private readonly Type _type;
@@ -121,7 +119,7 @@ internal abstract class Pokemon
 		ConsoleWritePrint.WriteLine(
 			Attacks[randomIndex].Use(Level)
 		);
-	};
+	}
 
 
 	/// <summary>
@@ -130,6 +128,6 @@ internal abstract class Pokemon
 	public void RaiseLevel()
 	{
 		Level++;
-		_consoleWritePrint.WriteLine($"{Name} leveled up to {Level}!");
+		ConsoleWritePrint.WriteLine($"{Name} leveled up to {Level}!");
 	}
 }

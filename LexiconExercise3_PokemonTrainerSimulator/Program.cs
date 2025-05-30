@@ -13,11 +13,10 @@ namespace LexiconExercise3_PokemonTrainerSimulator
 
             var flamethrower = new Attack("Flamethrower", Type.Fire, 12);
             var ember = new Attack("Ember", Type.Fire, 6);
+			// TODO: HANDLE exeption
+			Charmander charmander = new Charmander("Boko", 1, new List<Attack> {flamethrower, ember});
 
-            //TODO: HANDLE exeption
-            Charmander charmander = new Charmander("Boko", 1, new List<Attack> {flamethrower, ember});
-
-			Console.WriteLine(charmander.Attack());
+			charmander.Attack();
 
 			Console.WriteLine();
         }
