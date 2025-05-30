@@ -19,15 +19,6 @@ internal class Pikachu : ElectricPokemon, IEvolvable
 	{
 	}
 
-	public void Evolve()
-	{
-		string newName = "Raichu";
-		int newLevel = Level + 10;
-		DisplayEvolutionMessage.PrintEvolutionMessage(
-			Name, newName, newLevel
-		);
-	}
-
 	/// <summary>
 	/// Evolves the Pikachu into a Raichu, increasing its level by 10 and changing its name.
 	/// </summary>
