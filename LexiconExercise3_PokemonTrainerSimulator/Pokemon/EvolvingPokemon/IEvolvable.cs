@@ -1,4 +1,4 @@
-﻿namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon
+﻿namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.EvolvingPokemon
 {
 	/// <summary>
 	/// An interface representing a <see cref="Pokemon"/> that can evolve into a more powerful form.
@@ -6,7 +6,7 @@
 	internal interface IEvolvable
 	{
 		/// <summary>
-		/// Evolves the pokemon into its next stage, if applicable.
+		/// Evolves the Pokémon into its next stage, if applicable.
 		/// </summary>
 		void Evolve();
 	}
