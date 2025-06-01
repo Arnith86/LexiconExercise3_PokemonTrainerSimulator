@@ -1,11 +1,12 @@
-﻿using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
+﻿using LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.EvolvingPokemon;
+using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 
-namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.NamedTypePokemon;
+namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.NamedTypePokemon;
 
 /// <summary>
 /// Represents a Squirtle <see cref="Pokemon"/> which is a type of <see cref="WaterPokemon"/>.
 /// </summary>
-internal class Squirtle : WaterPokemon
+internal class Squirtle : WaterPokemon, IEvolvable
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Squirtle"/> class with the specified name, level and attacks.

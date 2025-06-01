@@ -2,7 +2,7 @@
 using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation;
 
-namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon
+namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes
 {
 	internal class WaterPokemon : Pokemon
 	{

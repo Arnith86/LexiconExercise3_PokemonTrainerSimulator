@@ -1,4 +1,4 @@
-﻿using LexiconExercise3_PokemonTrainerSimulator.Pokemon;
+﻿using LexiconExercise3_PokemonTrainerSimulator.PokemonTypes;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
 using System;
 using System.Collections.Generic;

@@ -1,7 +1,7 @@
 ﻿using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation;
 
-namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.GenericTypePokemon
+namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.GenericTypePokemon
 {
 	internal class FirePokemon : Pokemon
 	{

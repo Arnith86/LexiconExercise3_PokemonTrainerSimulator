@@ -3,7 +3,7 @@ using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation;
 
 
-namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon;
+namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes;
 
 /// <summary>
 /// An abstract base class representing a Pokémon in the Pokémon training simulator.

@@ -1,4 +1,4 @@
-﻿namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.EvolvingPokemon
+﻿namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.EvolvingPokemon
 {
 	/// <summary>
 	/// An interface representing a <see cref="Pokemon"/> that can evolve into a more powerful form.

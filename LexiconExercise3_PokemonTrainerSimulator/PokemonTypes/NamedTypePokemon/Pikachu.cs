@@ -1,7 +1,7 @@
-﻿using LexiconExercise3_PokemonTrainerSimulator.Pokemon.EvolvingPokemon;
+﻿using LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.EvolvingPokemon;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 
-namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.NamedTypePokemon;
+namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.NamedTypePokemon;
 
 /// <summary>
 /// Represents a Pikachu <see cref="Pokemon"/> which is a type of <see cref="ElectricPokemon"/>.

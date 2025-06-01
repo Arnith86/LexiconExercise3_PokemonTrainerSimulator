@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon
+namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes
 {
 	internal class ElectricPokemon : Pokemon
 	{

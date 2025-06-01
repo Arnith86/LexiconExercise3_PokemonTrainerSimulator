@@ -1,8 +1,8 @@
-﻿using LexiconExercise3_PokemonTrainerSimulator.Pokemon.EvolvingPokemon;
-using LexiconExercise3_PokemonTrainerSimulator.Pokemon.GenericTypePokemon;
+﻿using LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.EvolvingPokemon;
+using LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.GenericTypePokemon;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 
-namespace LexiconExercise3_PokemonTrainerSimulator.Pokemon.NamedTypePokemon;
+namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes.NamedTypePokemon;
 
 /// <summary>
 /// Represents a Charmander <see cref="Pokemon"/> which is a type of <see cref="FirePokemon"/>.
