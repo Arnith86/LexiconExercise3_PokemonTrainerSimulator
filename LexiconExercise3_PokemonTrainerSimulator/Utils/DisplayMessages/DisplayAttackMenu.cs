@@ -1,10 +1,5 @@
 ﻿using LexiconExercise3_PokemonTrainerSimulator.PokemonTypes;
 using LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
 
@@ -21,6 +16,6 @@ internal static class DisplayAttackMenu
 	public static void DisplayAttacks(List<Attack> attacks)
 	{
 		for (int i = 0; i < attacks.Count; i++)
-			ConsoleWritePrint.WriteLine($"{i+1} {attacks[i].Name}");
+			ConsoleWritePrint.WriteLine($"{i + 1} {attacks[i].Name}");
 	}
 }

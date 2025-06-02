@@ -12,7 +12,7 @@ namespace LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages
 		/// </summary>
 		public static void InvalidMenuInput() =>
 			DisplayErrorMessage("You supplied an invalid input! \nOnly integers within the menus range are allowed, try again!");
-		
+
 		/// <summary>
 		/// Used to inform that input supplied cannot be a negative value.
 		/// </summary>

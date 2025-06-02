@@ -96,7 +96,7 @@ internal abstract class Pokemon
 		DisplayAttackMenu.DisplayAttacks(Attacks);
 		Attack attack = ChoseAttack();
 
-		ConsoleWritePrint.WriteLine( attack.Use(Level) );
+		ConsoleWritePrint.WriteLine(attack.Use(Level));
 	}
 
 	private Attack ChoseAttack()

@@ -32,8 +32,8 @@ namespace LexiconExercise3_PokemonTrainerSimulator
 
 			try
 			{
-				pokemons.Add( new Charmander("Charmander", 1, new List<Attack> { ember, flamethrower }));
-				pokemons.Add( new Squirtle("Squirtle", 1, new List<Attack> { bubble, waterGun }));
+				pokemons.Add(new Charmander("Charmander", 1, new List<Attack> { ember, flamethrower }));
+				pokemons.Add(new Squirtle("Squirtle", 1, new List<Attack> { bubble, waterGun }));
 				pokemons.Add(new Pikachu("Pikachu", 1, new List<Attack> { thunderShock, thunderBolt }));
 				pokemons.Add(new Tangela("Tangela", 1, new List<Attack> { bubble, waterGun }));
 			}
@@ -53,9 +53,8 @@ namespace LexiconExercise3_PokemonTrainerSimulator
 				return;
 			}
 
-			List<WaterPokemon> waterPokemons = new List<WaterPokemon>();
-
-
+			
+			// Simulate Pokémon training
 			foreach (var pokemon in pokemons)
 			{
 				ConsoleWritePrint.WriteLine($"{pokemon.Name} performs a random attack: ");

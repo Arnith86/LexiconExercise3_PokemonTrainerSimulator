@@ -1,13 +1,4 @@
-﻿using LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
-using LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages;
-using LexiconExercise3_PokemonTrainerSimulator.Utils.InputValidations.AttackMenuValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes
+﻿namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes
 {
 	internal class ElectricPokemon : Pokemon
 	{

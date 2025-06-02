@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
+﻿namespace LexiconExercise3_PokemonTrainerSimulator.Utils.ConsoleAbstraction;
 
 /// <summary>
 /// A static class that abstracts console input and output operations.

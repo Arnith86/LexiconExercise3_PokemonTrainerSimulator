@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes;
+﻿namespace LexiconExercise3_PokemonTrainerSimulator.PokemonTypes;
 /// <summary>
 /// Represents an attack that can be assigned to a Pokémon.
 /// </summary>
