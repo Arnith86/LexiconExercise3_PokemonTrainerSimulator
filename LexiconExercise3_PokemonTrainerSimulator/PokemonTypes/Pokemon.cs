@@ -104,7 +104,9 @@ internal abstract class Pokemon
 		int menuOption = int.Parse(
 			AttackMenuInputValidation.AttackMenuInputRequest(1, Attacks.Count)
 		);
-		return Attacks[menuOption];
+
+		// -1 to convert to 0 start index.
+		return Attacks[menuOption - 1];
 	}
 
 	/// <summary>

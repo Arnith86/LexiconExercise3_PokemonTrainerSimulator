@@ -15,7 +15,7 @@ namespace LexiconExercise3_PokemonTrainerSimulator.Utils.DisplayMessages
 		/// <param name="newLevel">Int representing the new level of the <see cref="PokemonTypes"/>.</param>
 		internal static void PrintEvolutionMessage(string name, string newName, int newLevel)
 		{
-			Console.BackgroundColor = ConsoleColor.DarkYellow;
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			ConsoleWritePrint.WriteLine($"{name} is evolving...Now it's {newName}! Level {newLevel}!");
 			Console.ResetColor();
 		}
